@@ -12,7 +12,7 @@ with DAG(
     schedule="0 0 * * *",
     start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False,
-    tag=['길택']
+    tags=["길택"]
 ) as dag:
     bash_t1 = BashOperator(
         task_id="bash_t1",
