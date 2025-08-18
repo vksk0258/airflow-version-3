@@ -11,7 +11,8 @@ with DAG(
     dag_id="dags_conn_test",
     schedule=None,
     start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
-    catchup=False
+    catchup=False,
+    tags=["길택"]
 ) as dag:
     
     t1 = EmptyOperator(
